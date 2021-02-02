@@ -1,0 +1,10 @@
+1、npm i nodemon -g 并配置package.json中，"server":"nodemon server.js"  
+热启动服务：npm run server
+
+2、npm i mongoose express body-parser
+
+3、npm i bcrypt  用于密码的加密解密
+
+4、npm i jsonwebtoken  用于登录成功生成token
+
+5、npm i passport passport-jwt

@@ -1,0 +1,9 @@
+npm-debug.log
+node_modules
+.project
+.vscode
+.history
+.DS_Store
+dist/
+debug.log
+package-lock.json
