@@ -8,11 +8,11 @@ const router = express.Router();
 
 // 注册
 router.post('/register', (req, res) => {
-  // console.log(req.body)
   const newUser = new User(req.body)
   // 查询数据库是否存在该用户
   User.findOne({ name: req.body.name }).then((user) => {
     if (user) {
+      // 定义code--->1:成功，0:无数据，-1:失败
       return res.status(400).json({
         code: -1,
         msg: '该用户已存在，请重新注册！'
@@ -82,7 +82,7 @@ router.post('/login', (req, res) => {
 })
 
 // 验证token是否合法  passport：passport.js文件中获取来的数据
-router.get("/current",passport.authenticate("jwt",{session:false}),(req,res)=>{
+router.get("/verifyToken",passport.authenticate("jwt",{session:false}),(req,res)=>{
   res.json({
     code:1,
     msg:"success",
