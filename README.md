@@ -1,3 +1,1 @@
-# mydemo_node
-
-#npm run server 启动服务
+# npm run server 启动后台服务
